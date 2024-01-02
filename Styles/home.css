@@ -100,7 +100,7 @@ input:focus,textarea:focus
 .row1
 {
     height: 100vh;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     background-image: url(../Images/blue\ circle\ background.png);
     background-repeat: no-repeat;
     background-position: right -150px bottom -350px;
@@ -175,18 +175,31 @@ input:focus,textarea:focus
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 60vh;
 }
 
 .row2>h1
 {
-    margin-top: 10px;
+    margin: 20px;
+}
+
+.features-container
+{
+    display: flex;
+    padding: 5px 25px;
 }
 
 .feature
 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 25px;
+    margin: 15px;
+}
+
+.feature *
+{
+    margin: 3px 5px;
 }
 
 .feature-icon img
@@ -196,7 +209,10 @@ input:focus,textarea:focus
 
 .feature-description
 {
-    margin-left: 1.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* row 2 ends  */
