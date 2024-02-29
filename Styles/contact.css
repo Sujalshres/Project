@@ -112,6 +112,7 @@ input:focus,textarea:focus
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 100vh;
 }
 
 
@@ -124,7 +125,6 @@ input:focus,textarea:focus
 .description p
 {
     margin-left: 5px;
-    font-size: 1.3vw;
 }
 
 .top-message-button
@@ -133,7 +133,7 @@ input:focus,textarea:focus
     margin-left: 5px;
     font-size: 1.3vw;
     padding: 0.5em 2.5em;
-    border: 1px solid black;
+    border: none;
     border-radius: 50px;
     background-color: #6dc2ec;
     cursor: pointer;
@@ -148,7 +148,7 @@ input:focus,textarea:focus
 .background-image
 {
     /* height: 100vh; */
-    width: 50vw;
+    width: 45vw;
 }
 
 /* row 1 ends  */
@@ -181,6 +181,7 @@ input:focus,textarea:focus
 
 .info
 {
+    height: 18.8rem;
     background-color: #4091b9;
     color: white;
     padding: 10px 25px;
@@ -193,9 +194,10 @@ input:focus,textarea:focus
 .message-input-div
 {
     width: 100%;
+    height: 18.8rem;
     background-color: #1b2937;
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
     margin-right: 70px;
     display: flex;
     flex-direction: column;

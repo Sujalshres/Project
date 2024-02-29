@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Page</title>
+    <link rel="stylesheet" href="../Styles/admin_login.css">
+    <script src="https://kit.fontawesome.com/2c8d038c04.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    
+    <link rel="website icon" href="../Images/favicon.png" type="png">
+</head>
+
+<body>
+    <div class="logo">
+        <img id="logo" src="../Images/logo.png" alt="">
+    </div>
+
+    <div class="main">
+
+        <div class="left">
+            <img src="../Images/admin page logo.png" alt="" srcset="">
+        </div>
+
+        <div class="line">
+            <!--this div places vertical  -->
+        </div>
+
+        <form action="../php/admin_login.php" method="post">
+
+            <div class="right">
+
+                <div class="welcome-login">
+                    <p id="welcome">Welcome!!</p>
+                    <p>Login as Admin User</p>
+                </div>
+
+                <p id="name">Name</p>
+                <i class="fa-solid fa-user"></i><input type="text" name="username">
+                <p id="pass">Password</p>
+                <i class="fa-solid fa-key"></i><input type="password" name="password" id="">
+                <br>
+                <input type="submit" value="Log in" name="submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

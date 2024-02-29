@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCA Quiz Hub</title>
+    <title>BCA Quiz Hub | Contact</title>
 
     <!-- fontawesome link  -->
     <script src="https://kit.fontawesome.com/c9a02cbee6.js" crossorigin="anonymous"></script>
@@ -37,10 +37,10 @@
         <div class="navbar">
             <ul>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="">Quiz</a></li>
-                <li><a href="">Team</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="quiz_selection.html">Quiz</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -80,34 +80,58 @@
                     and
                     timely response from our team.
                 </p>
-                <br>
                 <p>
                     Please understand that response times may vary based on the volume of requests. Thank you for
                     reaching out.
                 </p>
             </div>
 
-            <div class="message-input-div">
-                <div class="name-email">
-                    <div id="name">
-                        <p>Name</p>
-                        <input type="text">
+            <form action="" method="post">
+                <div class="message-input-div">
+                    <div class="name-email">
+                        <div id="name">
+                            <p>Name</p>
+                            <input type="text" name="name">
+                        </div>
+
+                        <div id="email">
+                            <p>Email</p>
+                            <input type="email" name="email">
+                        </div>
                     </div>
 
-                    <div id="email">
-                        <p>Email</p>
-                        <input type="email">
+                    <div id="message">
+                        <p>Message</p>
+                        <textarea id="" cols="" rows="" name="message" required ></textarea>
                     </div>
+
+                    <button class="sub" name="sub">Submit</button>
+                    <!-- <input type="submit" class="" value="Submit"> -->
                 </div>
+            </form>
 
-                <div id="message">
-                    <p>Message</p>
-                    <textarea name="" id="" cols="" rows="" required></textarea>
-                </div>
+            <?php
+                $con = mysqli_connect('localhost','root','','bca_admin');
 
-                <button class="sub">Submit</button>
+                if(isset($_POST['sub']))
+                {
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $message = $_POST['message'];
 
-            </div>
+                    if($name == "")
+                    {
+                        $name = "Anonymous";
+                    }
+                    if($email == "")
+                    {
+                        $email = "Anonymous";
+                    }
+
+                    mysqli_query($con,"INSERT INTO `feedback` VALUES(NULL,'$name','$email','$message','');");
+                }
+            ?>
+
         </div>
     </div>
     <!-- row 2 ends  -->
@@ -130,11 +154,11 @@
 
         <div class="column2">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="">Quiz</a></li>
-                <li><a href="">Team</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>
 

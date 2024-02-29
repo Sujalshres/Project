@@ -1,0 +1,93 @@
+p{
+    text-align: justify;
+    margin: 5px;
+}
+body{
+    background-color: rgb(189, 216, 210);
+    color: black;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+p
+{
+    text-align: justify;
+    margin: 10px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+/* navigation bar  */
+.top
+{
+    display: flex;
+    background-color: #51afde;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.logo
+{
+    height: 3.5em;
+    margin-left: 4.5rem;
+    cursor: pointer;
+}
+
+.navbar
+{
+    margin-right: 50px;
+}
+
+.navbar ul
+{
+    display: flex;
+}
+
+.navbar ul li a
+{
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover
+{
+    color: rgb(75, 75, 75);
+}
+
+.navbar li
+{
+    margin-left: 7vw;
+}
+
+/* navigation bar ends  */
+h1{
+    text-align: center;
+}
+
+.list
+{
+    margin: 10px;
+}
+
+.course
+{
+    color: rgb(0, 4, 255);
+}

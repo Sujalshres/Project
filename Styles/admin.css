@@ -1,0 +1,317 @@
+/* default class */
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+p
+{
+    display: inline;
+    text-align: justify;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+ul
+{
+    list-style-type: none;
+        word-wrap: break-word; 
+}
+
+
+input
+{
+    height: 1rem;
+}
+
+input,textarea
+{
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    outline: none;
+}
+
+select
+{
+    outline: none;
+}
+
+th,td
+{
+    padding: 5px;
+}
+
+.action
+{
+    min-width: 10vw;
+}
+
+hr
+{
+    width: 90%;
+    align-self: center;
+    border: 0.1em solid black;
+}
+
+.add,.edit
+{
+    border: 1px solid black;
+    margin: 10px;
+    width: 90vw;
+    justify-content: center;
+}
+
+.add *,.edit *
+{
+    margin: 5px;
+}
+
+/* default class ends */
+
+
+
+
+/* navigation bar  */
+
+.top
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.logo
+{
+    height: 3.5em;
+    margin-left: 4.5rem;
+    cursor: pointer;
+}
+
+
+.navbar ul
+{
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.navbar ul li
+{
+    margin: 0px 15px;
+}
+
+.navbar #theme,
+.navbar #notification-icon-li,
+.navbar #admin-icon-li
+{
+    cursor: pointer;
+}
+
+.navbar ul li i
+{
+    font-size: 30px;
+    color: rgb(37, 37, 37);
+}
+
+.navbar ul li a
+{
+    padding: 3px 10px;
+}
+
+
+/* navigation bar ends  */
+
+
+
+.aligning
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* styles for div to add questions */
+.question
+{
+    width: 86%;
+}
+
+.submit,.reset
+{
+    height: auto;
+    width: 7vw;
+}
+
+
+/* styles for div to add questions ends */
+
+
+
+
+/* styles for div to edit or delete question  */
+table
+{
+    border-collapse: collapse;
+}
+/* styles for div to edit or delete question ends */
+
+
+
+/* Admin and notification options  */
+
+.darkmode hr
+{
+    border: 0.1em solid rgb(248, 246, 246);
+}
+
+.options-admin
+{
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: rgb(248, 246, 246);
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    display: none;
+}
+
+
+.notification
+{
+    width: 28vw;
+    max-height: 80vh;
+    overflow-y: scroll;
+    border: solid black 1px;
+    border-radius: 5px;
+    background-color: rgb(248, 246, 246);
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    display: none;
+}
+
+#new_tab
+{
+    font-size: 15px;
+}
+
+.notification ul
+{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.options-admin ul
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message
+{
+    width: 95%;
+    margin: 5px 5px;
+    padding: 15px 5px;
+    background-color: #b4b2b2;
+}
+
+.message h4
+{
+    text-align: left;
+}
+/* Admin and notification options ends  */
+
+
+
+
+/* darkmode styles  */
+
+.darkmode
+{
+    background-color: #333333;
+    color: #fff;
+}
+
+.darkmode a
+{
+    color: #fff;
+}
+
+.darkmode input,
+.darkmode select,
+.darkmode .add,
+.darkmode .edit,
+.darkmode table
+{
+    background-color: #3B3B3B;
+    color: #fff;
+    border: solid #ffffff2f 1px;
+    outline: none;
+}
+
+.darkmode input[type = 'submit']:hover,
+.darkmode input[type = 'reset']:hover
+{
+    transition: background-color 0.3s;
+    background-color: #5f5f5f;
+}
+
+.darkmode input[type = 'submit'],
+.darkmode input[type = 'reset']
+{
+    cursor: pointer;
+}
+
+.darkmode .fa-solid
+{
+    color: #fff;
+}
+
+.darkmode .options-admin
+{
+    border: solid #fff 1px;
+    background-color: #333;
+}
+
+
+.darkmode .notification
+{
+    border: solid #fff 1px;
+    background-color: #333;
+}
+
+.darkmode .message
+{
+    background-color: #4e4e4e;
+    
+}
+
+/* darkmode styles ends  */

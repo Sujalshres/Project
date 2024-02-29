@@ -1,0 +1,100 @@
+/* default class */
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+p
+{
+    display: inline;
+    text-align: justify;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+
+input
+{
+    height: 1rem;
+    width: 95%;
+}
+
+input,textarea,button
+{
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+th,td
+{
+    padding: 5px;
+}
+
+/* default class ends */
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table
+{
+    width: 80vw;
+}
+
+
+textarea
+{
+    resize: none;
+    width: 95%;
+    height: 5em;
+}
+
+button
+{
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 5px 10px;
+    width: 5rem;
+    height: auto;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(5, 255, 172);
+}
+
+button[type="submit"]:hover
+{
+    background-color: rgb(66, 250, 189);
+}

@@ -1,0 +1,100 @@
+/* default class */
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+    padding: 0px;
+}
+
+body
+{
+    display: flex;
+    height: 100vh;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+p
+{
+    text-align: justify;
+    display: inline;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+input
+{
+    height: 1rem;
+    width: 90%;
+}
+
+input[type="submit"]
+{
+    height: fit-content;
+    width: 45%;
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 27px;
+}
+
+input[type="submit"]:hover
+{
+    background-color: rgb(64, 253, 190);
+}
+
+input,textarea
+{
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    transition:border, box-shadow 0.5s;
+    outline: none;
+}
+
+input:focus,textarea:focus
+{
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 2px #b8b8b8;
+}
+
+/* default class ends  */
+
+.container
+{
+    /* height: 50vh; */
+    width: 35vw;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+.container *
+{
+    padding: 5px;
+}
+
+.box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.center
+{
+    text-align: center;
+}

@@ -1,0 +1,132 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+p
+{
+    margin: 0px;
+}
+
+
+#logo
+{
+    width: 150px;
+    height: auto;
+}
+
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0,176,221);
+}
+
+
+.main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    margin-top: 50px;
+}
+
+
+input[type="submit"]{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+    top: 30px;
+    padding: 7px;
+    width: 75px;
+    border-radius: 20px;
+    background-color: rgb(0,176,221);
+    border: 2px solid rgb(0,176,221) ;
+    transition:0.5s all;
+}
+
+input[type="submit"]:hover
+{
+    color: white;
+    box-shadow: 2px 2px 2px rgb(73, 73, 73);
+
+}
+
+@media only screen and (max-width: 767px)
+{
+    .main
+    {
+        grid-template-columns: 1fr;
+    }
+    .left
+    {
+        display: none;
+    }
+}
+
+#welcome
+{
+    font-size: x-large;
+    font-weight:bolder;
+}
+
+.welcome-login
+{
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="password"]
+{
+    /* border-radius: 4px; */
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: border 0.5s;
+
+} 
+
+input[type="text"]:focus, input[type="password"]:focus
+{
+    border-bottom: 1px solid rgb(0,176,221);
+    outline: none;
+}
+
+
+i
+{
+   position: relative;
+   top: 1px;
+   left:-10px;
+}
+
+#name, #pass 
+{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#pass
+{
+    margin-top: 15px;
+}
+
+.right
+{
+    position: relative;
+    top: -20px;
+}
+.line
+{
+    position: absolute;
+    width: 1px;
+    background-color: rgba(122, 122, 122, 0.651);
+    height: 400px;
+    top: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+}
