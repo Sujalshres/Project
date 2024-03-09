@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCA Quiz Hub</title>
+    <title>BCA Quiz Hub | Quiz</title>
 
     <!-- fontawesome link  -->
     <script src="https://kit.fontawesome.com/c9a02cbee6.js" crossorigin="anonymous"></script>
@@ -57,17 +57,37 @@
                     $question_no = array(); //to store random numbers which will be used to select question from database (question id)
                     $i = 0;
 
+                    //selecting available question no from database
+                    $all_question_no = array();
+                    $result = mysqli_query($db,"SELECT `q_id` FROM `$subject`");
+
+                    while($row = mysqli_fetch_assoc($result))
+                    {
+                        $all_question_no[] = $row['q_id'];
+                    }
+
+                    //to terminate execution of code if available questions in database is less than 10
+                    if(count($all_question_no)<10)
+                    {
+                        echo '<p style="color:red;text-align:center;">ERROR!!<br>Not enough Question in database. Please try other subjects<br><p>';
+                        echo "Apologies for inconvenience";
+
+                        exit();
+                    }
+
+
                     //will generate 10 non-repetative random numbers
                     while($i<10) 
                     {
-                        $rand = rand(1,20);
+                        $rand = array_rand($all_question_no);
                         if(!in_array($rand,$question_no))
                         {
-                            $question_no[] = $rand;
+                            $question_no[] = $all_question_no[$rand];
                             $i++;
                         }
                     }
 
+                    
                     //displays questions and answers
                     for($i=0;$i<10;$i++)
                     {
@@ -80,20 +100,21 @@
                         echo '</tr>';
                         echo '<tr>';
                             echo '<td rowspan="2"></td>';
-                            echo '<td><input type="radio" name="q'.($i+1).'" value="a"></td>';
-                            echo '<td>a)</td>';
-                            echo '<td>'.$row['option_a'].'</td>';
-                            echo '<td><input type="radio" name="q'.($i+1).'" value="b"></td>';
-                            echo '<td>b)</td>';
-                            echo '<td>'.$row['option_b'].'</td>';
+                            echo '<td><input type="radio" id="q'.($i+1).'a" name="q'.($i+1).'" value="a"></td>';
+                            echo '<td><label for="q'.($i+1).'a">a)</label></td>';
+                            echo '<td><label for="q'.($i+1).'a">'.$row['option_a'].'</label></td>';
+
+                            echo '<td><input type="radio" id="q'.($i+1).'b" name="q'.($i+1).'" value="b"></td>';
+                            echo '<td><label for="q'.($i+1).'b">b)</label></td>';
+                            echo '<td><label for="q'.($i+1).'b">'.$row['option_b'].'</label></td>';
                         echo '</tr>';
                         echo '<tr>';
-                            echo '<td><input type="radio" name="q'.($i+1).'" value="c"></td>';
-                            echo '<td>c)</td>';
-                            echo '<td>'.$row['option_c'].'</td>';
-                            echo '<td><input type="radio" name="q'.($i+1).'" value="d"></td>';
-                            echo '<td>d)</td>';
-                            echo '<td>'.$row['option_d'].'</td>';
+                            echo '<td><input type="radio" id="q'.($i+1).'c" name="q'.($i+1).'" value="c"></td>';
+                            echo '<td><label for="q'.($i+1).'c">c)</label></td>';
+                            echo '<td><label for="q'.($i+1).'c">'.$row['option_c'].'</label></td>';
+                            echo '<td><input type="radio" id="q'.($i+1).'d" name="q'.($i+1).'" value="d"></td>';
+                            echo '<td><label for="q'.($i+1).'d">d)</label></td>';
+                            echo '<td><label for="q'.($i+1).'d">'.$row['option_d'].'</label></td>';
                         echo '</tr>';
 
                         $correct_answer[] = $row['answer'];
@@ -104,7 +125,6 @@
                     $_SESSION['question_no'] = $question_no;
 
 
-                    print_r($correct_answer);
                 ?>
             </table>
             <br><br>

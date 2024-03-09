@@ -1,12 +1,16 @@
-p{
+p
+{
     text-align: justify;
     margin: 5px;
 }
-body{
-    background-color: rgb(189, 216, 210);
+
+body
+{
     color: black;
 }
-*{
+
+*
+{
     margin: 0px;
     padding: 0px;
     font-family: 'Nunito', sans-serif;

@@ -14,6 +14,11 @@ a
 
 p
 {
+    text-align: center;
+}
+
+.para-justify
+{
     text-align: justify;
 }
 
@@ -47,11 +52,21 @@ input:focus,textarea:focus
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 0 0 2px #b8b8b8;
 }
+
+
 /* default class ends */
 
 
 /* row 1 */
 /* navigation bar  */
+
+#hamburger-icon
+{
+    display: none;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
 .top
 {
     display: flex;
@@ -100,14 +115,15 @@ input:focus,textarea:focus
 {
     height: 100vh;
     background-color: #ffffff;
-    background-image: url(../Images/blue\ circle\ background.png);
+    /* background-image: url(../Images/blue\ circle\ background.png); */
     background-repeat: no-repeat;
     background-position: right -150px bottom -350px;
 }
 
 .background
 {
-    width: 40rem;
+    width: 45vw;
+    max-width: 33rem;
     bottom: 0rem;
     right: 0.1vw;
     position: absolute;
@@ -169,7 +185,7 @@ input:focus,textarea:focus
 
 .row2
 {
-    background-color: rgb(189, 216, 210);
+    background-color: #51afde;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,3 +313,10 @@ input:focus,textarea:focus
     height: 2rem;
 }
 /* row 4 ends  */
+
+
+
+/* Styles for responsiveness */
+
+
+/* Styles for responsiveness ends */

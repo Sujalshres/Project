@@ -66,11 +66,10 @@ session_start();
                         <td><input type="password" name="newpassword2" required></td>
                     </tr>
                     
-                    <tr>
-                        <td colspan='2' class="center"><input type="submit" value="Submit" name="submit"></td>
-                    </tr>
                     
                 </table>
+                <input class="submit" type="submit" value="Submit" name="submit">
+                <a class="cancel" href="admin.php"><p>Cancel</p></a>
                 
             </form>
 

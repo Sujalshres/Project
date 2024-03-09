@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCA Quiz Hub</title>
+    <title>BCA Quiz Hub | Result</title>
 
     <!-- fontawesome link  -->
     <script src="https://kit.fontawesome.com/c9a02cbee6.js" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@
                 
                     $db = mysqli_connect('localhost','root','','bca');
 
-                    echo "<h2>Congratulations</h2>";
+                    echo "<h2><br>Congratulations</h2>";
                     
                     $user_answer = array();
                     //code to run after clicking submit
@@ -89,7 +89,7 @@
                     }
 
                     echo "You scored ".$score;
-
+                    echo "<br><br>";
 
                     //displays questions and answers
                     $j = 1;
