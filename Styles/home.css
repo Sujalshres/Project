@@ -113,19 +113,18 @@ input:focus,textarea:focus
 
 .row1
 {
-    height: 100vh;
+    display: flex;
+    flex-direction:column;
     background-color: #ffffff;
     /* background-image: url(../Images/blue\ circle\ background.png); */
-    background-repeat: no-repeat;
-    background-position: right -150px bottom -350px;
 }
 
 .background
 {
     width: 45vw;
-    max-width: 33rem;
-    bottom: 0rem;
-    right: 0.1vw;
+    max-width: 28rem;
+    top: 6rem;
+    right: 2rem;
     position: absolute;
 }
 
@@ -138,7 +137,7 @@ input:focus,textarea:focus
     margin-left: 4.5rem;
     margin-top: 2.5rem;
     width: fit-content;
-    height: 80vh;
+    height: 26rem;
 }
 
 .welcome
@@ -153,7 +152,7 @@ input:focus,textarea:focus
 {
     margin-left: 0.3rem;
     margin-top: 0.2rem;
-    font-size: 1.6vw;
+    /* font-size:  ; */
 }
 
 .quizbtn
@@ -190,7 +189,6 @@ input:focus,textarea:focus
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
 }
 
 .row2>h1
@@ -256,6 +254,14 @@ input:focus,textarea:focus
     align-items: center;
 }
 
+.horizontal-line
+{
+    display: none;
+    height: 1px;
+    width: 90vw;
+    background-color: rgb(187, 185, 185);
+}
+
 .readmore
 {
     display: block;
@@ -318,5 +324,141 @@ input:focus,textarea:focus
 
 /* Styles for responsiveness */
 
+/* styles for approx tablet size */
+@media screen and (max-width: 897px) 
+{
+    #hamburger-icon
+    {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 5px;
+    }
 
+    .top
+    {
+        /* centering the logo */
+        justify-content: center; 
+    }
+
+    .logo
+    {
+        margin: 0px;
+    }
+
+
+    .navbar
+    {
+        /* repositioning navbar */
+        position: fixed;
+        /* removing margin property */
+        margin: 0px;
+        inset: 4rem auto auto -7rem;
+        background-color: #51afde;
+        padding: 7px 27px;
+        transition: inset 0.5s;
+    }
+
+    .navbar ul 
+    {
+        /* displaying navbar options vertically */
+        flex-direction: column;
+    }
+
+    .navbar ul li
+    {
+        margin: 5px 0px;
+    }
+
+    .background
+    {
+        display: none;
+        /* position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        opacity: 0.2; */
+    }
+    
+    .container
+    {
+        align-items: center;
+        width: auto;
+        margin: auto;
+        background-image: url(../Images/home\ page\ icon.jpg);
+    }
+
+    .welcome
+    {
+        text-align: center;
+        font-size: 2.5rem;
+    }   
+
+    .description
+    {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* styles for approx tablet size ends */
+
+
+@media screen and (max-width: 782px)
+{
+    .features-container
+    {
+        flex-direction: column;
+    }
+
+    .feature
+    {
+        font-size: 1rem;
+    }
+
+    .feature-icon img
+    {
+        height: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 629px)
+{
+    .row3
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row3>div
+    {
+        margin-bottom: 10px;
+    }
+
+    .horizontal-line
+    {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 520px)
+{
+    .welcome
+    {
+        font-size: 2rem;
+    }
+
+    .description
+    {
+        font-size: 0.9rem;
+    }
+
+    .row1
+    {
+        height: 73vh;
+    }
+}
 /* Styles for responsiveness ends */
