@@ -58,9 +58,15 @@ input:focus,textarea:focus
 
 
 /* navigation bar  */
+#hamburger-icon
+{
+    display: none;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
 .top
 {
-    width: 100vw;
     display: flex;
     background-color: #51afde;
     align-items: center;
@@ -100,6 +106,10 @@ input:focus,textarea:focus
     margin-left: 7vw;
 }
 
+.navbar ul li a i 
+{
+    display: none;
+}
 /* navigation bar ends  */
 
 
@@ -118,20 +128,21 @@ input:focus,textarea:focus
 
 .description h1
 {
-    font-size: 5.5vw;
+    font-size: 5em;
     font-family: 'Raleway', sans-serif;
 }
 
 .description p
 {
+    font-size: 1.3em;
     margin-left: 5px;
 }
 
 .top-message-button
 {
-    margin-top: 2em;
+    margin-top: 1em;
     margin-left: 5px;
-    font-size: 1.3vw;
+    font-size: 1.2em;
     padding: 0.5em 2.5em;
     border: none;
     border-radius: 50px;
@@ -148,7 +159,7 @@ input:focus,textarea:focus
 .background-image
 {
     /* height: 100vh; */
-    width: 45vw;
+    max-width: 90vh;
 }
 
 /* row 1 ends  */
@@ -165,9 +176,9 @@ input:focus,textarea:focus
     background-color: #3d4954;
 }
 
-.row2>h1
+.row2 h1
 {
-    margin: 25px;
+    margin-bottom: 25px;
     color: rgb(209, 209, 209);
 }
 
@@ -193,12 +204,10 @@ input:focus,textarea:focus
 
 .message-input-div
 {
-    width: 100%;
     height: 18.8rem;
     background-color: #1b2937;
     color: white;
     padding: 10px 20px;
-    margin-right: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -338,3 +347,207 @@ textarea
     height: 2rem;
 }
 /* row 4 ends  */
+
+
+
+/* styles for approx tablet and mobile size */
+
+@media screen and (max-width: 1210px) 
+{
+    .description h1
+    {
+        font-size: 3.5em;
+    }    
+
+    .description p
+    {
+        font-size: 1.1em;
+        margin-left: 5px;
+    }
+
+    .top-message-button
+    {
+        font-size: 1em;
+    }
+
+    .background-image
+    {
+        width: 35em;
+    }
+}
+
+
+@media screen and (max-width: 1000px) 
+{
+    .description h1
+    {
+        font-size: 3em;
+    }    
+
+    .description p
+    {
+        font-size: 1em;
+        margin-left: 5px;
+    }
+
+    .top-message-button
+    {
+        font-size: 01em;
+    }
+
+    .background-image
+    {
+        width: 30em;
+    }
+}
+
+@media screen and (max-width: 897px) 
+{
+    #hamburger-icon
+    {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 5px;
+    }
+
+    .top
+    {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        /* centering the logo */
+        justify-content: center; 
+    }
+
+    .logo
+    {
+        margin: 0px;
+    }
+
+
+    .navbar
+    {
+        /* repositioning navbar */
+        position: fixed;
+        /* removing margin property */
+        margin: 0px;
+        inset: 4rem auto auto -9rem;
+        background-color: #51afde;
+        padding: 7px 27px;
+        transition: inset 0.5s;
+    }
+
+    .navbar ul 
+    {
+        /* displaying navbar options vertically */
+        flex-direction: column;
+    }
+
+    .navbar ul li
+    {
+        margin: 5px 0px;
+    }
+
+    .navbar ul li a 
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .navbar ul li a i 
+    {
+        display: grid;
+        place-items: center;
+    }
+
+    .row1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .row1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../Images/contact\ background.png);
+        opacity: 0.2; 
+        z-index: -1; 
+    }
+    
+    .description
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description h1
+    {
+        font-size: 5em;
+    }
+
+    .description p
+    {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .background-image
+    {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 545px)
+{
+   
+    .description h1
+    {
+        font-size: 3.5em;
+    }
+
+    .description p
+    {
+        text-align: center;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 940px)
+{
+    .row2
+    {
+        height: 45em;
+    }
+
+    .row2 h1
+    {
+        margin-bottom: 96px;
+    }
+    
+    .box
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info /* Friendly reminder section*/
+    {
+
+    }
+
+    .message-input-div
+    {
+        width: 76vw;
+    }
+}

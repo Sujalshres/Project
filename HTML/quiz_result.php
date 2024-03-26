@@ -21,29 +21,29 @@
     <link rel="website icon" href="../Images/favicon.png" type="png">
 
 
-    <link rel="stylesheet" href="../Styles/quiz.css">
-    <script src="../Script/quiz_result.js"></script>
+    <link rel="stylesheet" href="../Styles/quiz_result.css">
 </head>
 
 <body>
 
-    <div class="top">
-        <div>
-            <a href="home.html">
-                <img class="logo" src="../Images/logo.png" alt="">
-            </a>
-        </div>
+<div class="top">
+            <i class="fa-solid fa-bars" id="hamburger-icon" onclick="toggle()"></i> 
+            <div>
+                <a href="home.html">
+                    <img class="logo" src="../Images/logo.png" alt="">
+                </a>
+            </div>
 
-        <div class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                    <li><a href="quiz_selection.html">Quiz</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="about_us.html">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-            </ul>
+            <div class="navbar" id="navbar">
+                <ul>
+                    <li><a href="home.html"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                    <li><a href="quiz_selection.html"><i class="fa-solid fa-clipboard-list"></i><span>Quiz</span></a></li>
+                    <li><a href="team.html"><i class="fa-solid fa-users"></i><span>Team</span></a></li>
+                    <li><a href="about_us.html"><i class="fa-solid fa-circle-info"></i><span>About</span></a></li>
+                    <li><a href="contact.php"><i class="fa-regular fa-message"></i><span>Contact</span></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
 
     <div class="mcq">
             <table>
@@ -126,7 +126,6 @@
         <br><br>
     </div>
 
-
     <script>
         let correct_answer = <?php echo json_encode($correct_answer); ?>;
         let user_answer = <?php echo json_encode($user_answer); ?>;
@@ -154,6 +153,25 @@
 
             let sel = document.getElementById(id);
             sel.style.color = 'green';
+        }
+
+
+        //makes navbar responsive
+        let navbar = document.getElementById('navbar');
+        let navbar_visible = false;
+
+        function toggle()
+        {
+            if(navbar_visible == false)
+            {
+                navbar.style.inset = '4rem auto auto 0rem';
+                navbar_visible = true;
+            }
+            else
+            {
+                navbar.style.inset = '4rem auto auto -9rem';
+                navbar_visible = false;
+            }
         }
     </script>
 

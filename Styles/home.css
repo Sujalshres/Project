@@ -93,6 +93,11 @@ input:focus,textarea:focus
     display: flex;
 }
 
+.navbar li
+{
+    margin-left: 7vw;
+}
+
 .navbar ul li a
 {
     transition: 0.5s;
@@ -103,10 +108,11 @@ input:focus,textarea:focus
     color: rgb(75, 75, 75);
 }
 
-.navbar li
+.navbar ul li a i 
 {
-    margin-left: 7vw;
+    display: none;
 }
+
 
 /* navigation bar ends  */
 
@@ -116,7 +122,6 @@ input:focus,textarea:focus
     display: flex;
     flex-direction:column;
     background-color: #ffffff;
-    /* background-image: url(../Images/blue\ circle\ background.png); */
 }
 
 .background
@@ -152,7 +157,6 @@ input:focus,textarea:focus
 {
     margin-left: 0.3rem;
     margin-top: 0.2rem;
-    /* font-size:  ; */
 }
 
 .quizbtn
@@ -338,6 +342,9 @@ input:focus,textarea:focus
 
     .top
     {
+        position: fixed;
+        top: 0px;
+        width: 100%;
         /* centering the logo */
         justify-content: center; 
     }
@@ -354,7 +361,7 @@ input:focus,textarea:focus
         position: fixed;
         /* removing margin property */
         margin: 0px;
-        inset: 4rem auto auto -7rem;
+        inset: 4rem auto auto -9rem;
         background-color: #51afde;
         padding: 7px 27px;
         transition: inset 0.5s;
@@ -371,14 +378,21 @@ input:focus,textarea:focus
         margin: 5px 0px;
     }
 
+    .navbar ul li a 
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .navbar ul li a i 
+    {
+        display: grid;
+        place-items: center;
+    }
+    
     .background
     {
         display: none;
-        /* position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%,-50%);
-        opacity: 0.2; */
     }
     
     .container

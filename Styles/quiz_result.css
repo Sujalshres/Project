@@ -122,47 +122,50 @@ option,select
 /* navigation bar ends  */
 
 
-/* semester and subject selection  */
+/* MCQ section */
 
-.container
+.mcq
 {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 89vh;
-
+    margin-bottom: 3rem;
 }
 
-.box
+form
 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    border: 1px solid black;
-    height: 12rem;
-    width: 20rem;
+    align-items: center;
+}
+
+table
+{
+    max-width: 80vw;
+}
+
+td
+{
+   text-align: left; 
+   vertical-align: top;
 }
 
 .submit
 {
-    height: auto;
+    height: 2rem;
     width: 6rem;
-    cursor: pointer;
     background-color: #51afde;
-    padding: 5px 10px;
     border-radius: 15px;
-    border: none;
-    outline: none;
     transition: background-color 0.3s;
+    border: none;
 }
 
 .submit:hover
 {
-    background-color: #8ad6fc;
+    background-color: #85cdf1;
 }
-/* semester and subject selection ends */
+/* MCQ section ends */
 
 
 /* styles for approx tablet and mobile size */
@@ -227,8 +230,9 @@ option,select
         place-items: center;
     }
 
-    .container
+    .mcq
     {
-        margin-top: 60px;
+        margin-top: 70px;
     }
 }
+

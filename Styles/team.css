@@ -74,6 +74,14 @@ input:focus,textarea:focus
 
 /* row 1 */
 /* navigation bar  */
+#hamburger-icon
+{
+    display: none;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+
 .top
 {
     display: flex;
@@ -115,6 +123,10 @@ input:focus,textarea:focus
     margin-left: 7vw;
 }
 
+.navbar ul li a i 
+{
+    display: none;
+}
 /* navigation bar ends  */
 
 .ourteam
@@ -130,7 +142,6 @@ input:focus,textarea:focus
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    align-items: center;
     place-items: center;
 }
 
@@ -147,6 +158,7 @@ input:focus,textarea:focus
     border-radius: 7px;
     margin-top: 20px;
     padding: 20px;
+    min-height: 600px;
 }
 
 
@@ -189,16 +201,26 @@ input:focus,textarea:focus
 
 .links 
 {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 15px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height:30px ;
+    
+    
+}
+.links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.links ul li {
+    display: inline-block; /* Use inline-block to keep the list items in a row */
+    margin-right: 0px; /* Adjust spacing between icons */
+}
 
-.links > ul > li  
-{
-    list-style: none;
-    display: inline;
+.links ul li:last-child {
+    margin-right: 0; /* Remove margin from the last icon to prevent extra space */
 }
 
 /* icon animations  */
@@ -246,11 +268,25 @@ footer > .container
     }
 } */
 /* responsiveness for mobile devices */
-@media only  screen and (max-width:576px)  {
-    a i {
-        font-size: 20px;
-        width: 50px;
+@media screen and (max-width: 415px){
+   
+    a{
+        width: fit-content;
     }
+    #facebook,#linkedin,#github{
+        font-size: 25px;
+    }
+    li{
+        width: 85px;
+    }
+}
+
+@media only  screen and (max-width:476px)  {
+    a i {
+        font-size: 15px;
+        width: 32%;
+    }
+    
     .team{
         grid-template-columns: 1fr;
     }
@@ -262,13 +298,14 @@ footer > .container
         border-radius: 6%;
         margin-top: 15px;
     }
+    
 
 }
 
 
 
 /* Styles for devices with a minimum width of 992px and a maximum width of 1199px (typically small laptops) */
-@media (min-width: 577px) and (max-width: 1199px) {
+@media (min-width: 477px) and (max-width: 1199px) {
     .team{
         grid-template-columns: 1fr;
     }
@@ -277,4 +314,65 @@ footer > .container
 
     }
   }
-   
+
+@media screen and (max-width: 897px) 
+{
+    #hamburger-icon
+    {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 5px;
+    }
+
+    .top
+    {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        /* centering the logo */
+        justify-content: center; 
+    }
+
+    .logo
+    {
+        margin: 0px;
+    }
+
+
+    .navbar
+    {
+        /* repositioning navbar */
+        position: fixed;
+        /* removing margin property */
+        margin: 0px;
+        inset: 4rem auto auto -9rem;
+        background-color: #51afde;
+        padding: 7px 27px;
+        transition: inset 0.5s;
+    }
+
+    .navbar ul 
+    {
+        /* displaying navbar options vertically */
+        flex-direction: column;
+    }
+
+    .navbar ul li
+    {
+        margin: 5px 0px;
+    }
+
+    .navbar ul li a 
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .navbar ul li a i 
+    {
+        display: grid;
+        place-items: center;
+    }
+}
