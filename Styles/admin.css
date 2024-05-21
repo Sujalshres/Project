@@ -1,10 +1,20 @@
-/* default class */
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
 
 *
 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'nunito';
 }
 
 a
@@ -21,14 +31,14 @@ p
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     text-align: center;
 }
 
 ul
 {
     list-style-type: none;
-        word-wrap: break-word; 
+    word-wrap: break-word; 
 }
 
 
@@ -125,10 +135,10 @@ hr
     cursor: pointer;
 }
 
-.navbar ul li i
+.navbar ul li svg
 {
-    font-size: 30px;
-    color: rgb(37, 37, 37);
+    height: 40px;
+    color: rgb(92, 92, 92);
 }
 
 .navbar ul li a
@@ -159,7 +169,7 @@ hr
 .submit,.reset
 {
     height: auto;
-    width: 7vw;
+    width: 6rem;
 }
 
 
@@ -194,6 +204,8 @@ table
     right: 25px;
     display: none;
 }
+
+
 
 
 .notification

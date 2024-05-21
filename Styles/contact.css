@@ -1,9 +1,21 @@
 /* default class */
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
 *
 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'nunito';
 }
 
 html
@@ -24,7 +36,7 @@ p
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
 }
 
 ul
@@ -61,8 +73,8 @@ input:focus,textarea:focus
 #hamburger-icon
 {
     display: none;
-    font-size: 30px;
     margin-left: 10px;
+    height: 33px;
 }
 
 .top
@@ -106,9 +118,10 @@ input:focus,textarea:focus
     margin-left: 7vw;
 }
 
-.navbar ul li a i 
+.navbar ul li a svg
 {
     display: none;
+    height: 19px;
 }
 /* navigation bar ends  */
 
@@ -174,88 +187,95 @@ input:focus,textarea:focus
     justify-content: center;
     height: 100vh;
     background-color: #3d4954;
+    color: white;
 }
 
 .row2 h1
 {
-    margin-bottom: 25px;
+    margin: 10px 10px;
     color: rgb(209, 209, 209);
 }
 
 .box
 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    width: 80%;
     height: 20em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
 }
 
 .info
 {
-    height: 18.8rem;
-    background-color: #4091b9;
-    color: white;
-    padding: 10px 25px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding: 0px 15px;
+    background-color: #4091b9;
+}
+
+.info h2
+{
+    text-align: center;
 }
 
 .message-input-div
 {
-    height: 18.8rem;
+    display: grid;
+    justify-items: center;
+    height: 100%;
+    padding: 0px 15px;
     background-color: #1b2937;
-    color: white;
-    padding: 10px 20px;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'name email'
+    'message message'
+    'submit submit';
+}
+
+#name
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: name;
+    width: 100%;
+}
+
+#email
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: email;
+    width: 100%;
+}
+
+#message
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: message;
+    width: 100%;
+}
+
+#submit
+{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.name-email
-{
-    display: flex;
-    gap: 25px;
-}
-
-.name-email,
-#name,
-#email,
-#message,
-textarea
-{
-    width: 98%;
-}
-
-
-input[type="text"],
-input[type="email"]
-{
-    width: 95%;
-}
-
-
-#message
-{
-    margin-top: 10px;
-    height: 100%;
-}
-
-textarea
-{
-    height: 100%;
-    resize: none;
+    grid-area: submit;
+    width: 100%;
 }
 
 .sub
 {
-    margin-top: 4em;
     border-radius: 10px;
     border: none;
-    width: 15%;
-    padding: 0.5em;
+    width: 5rem;
+    height: 1.7rem;
     background-color: #34a2da;
     transition: background-color 0.5s;
 }
@@ -264,6 +284,19 @@ textarea
 {
     background-color: #2b85b3;
 }
+
+input
+{
+    width: 90%;
+}
+
+textarea
+{
+    resize: none;
+    height: 70%;
+    width: 95%;
+}
+
 
 /* row 2 ends  */
 
@@ -319,6 +352,14 @@ textarea
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.horizontal-line
+{
+    display: none;
+    height: 1px;
+    width: 90vw;
+    background-color: rgb(187, 185, 185);
 }
 
 .column3
@@ -456,10 +497,10 @@ textarea
         grid-template-columns: 1fr 2fr;
     }
     
-    .navbar ul li a i 
+    .navbar ul li a svg
     {
         display: grid;
-        place-items: center;
+        place-self: center;
     }
 
     .row1 {
@@ -521,33 +562,88 @@ textarea
     }
 }
 
-@media screen and (max-width: 940px)
+
+/* media queries for row 2 */
+
+@media screen and (max-width: 1053px)
 {
     .row2
     {
-        height: 45em;
+        height: 34em;
+        display: flex;
+        justify-content: flex-start;
     }
 
-    .row2 h1
-    {
-        margin-bottom: 96px;
-    }
-    
     .box
     {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-rows: 1fr 4fr;
+        grid-template-columns: 1fr;
     }
 
-    .info /* Friendly reminder section*/
+    .info
     {
-
+        height: 10em;
     }
 
     .message-input-div
     {
-        width: 76vw;
+        height: 18em;
+    }
+}
+
+
+@media screen and (max-width: 685px)
+{
+    .row2
+    {
+        height: 36em;
+    }
+
+    .info
+    {
+        height: 12em;
+    }
+
+    .message-input-div
+    {
+        display: grid;
+        height: 100%;
+        padding: 10px 15px;
+        background-color: #1b2937;
+        grid-template-rows: 1fr 1fr 2fr 0.5fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'name name'
+        'email email'
+        'message message'
+        'submit submit';
+    }
+
+    
+
+    input
+    {
+        width: 95%;
+    }
+}
+/* media queries for row 2 ends */
+
+@media screen and (max-width: 629px)
+{
+    .row3
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row3>div
+    {
+        margin-bottom: 10px;
+    }
+
+    .horizontal-line
+    {
+        display: block;
     }
 }

@@ -6,11 +6,23 @@ body
 }
 
 /* default class */
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
 *
 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'nunito';
 }
 
 a
@@ -26,7 +38,7 @@ p
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
 }
 
 ul
@@ -70,8 +82,8 @@ option,select
 #hamburger-icon
 {
     display: none;
-    font-size: 30px;
     margin-left: 10px;
+    height: 33px;
 }
 
 .top
@@ -115,9 +127,10 @@ option,select
     margin-left: 7vw;
 }
 
-.navbar ul li a i 
+.navbar ul li a svg
 {
     display: none;
+    height: 19px;
 }
 /* navigation bar ends  */
 
@@ -225,10 +238,10 @@ td
         grid-template-columns: 1fr 2fr;
     }
     
-    .navbar ul li a i 
+    .navbar ul li a svg
     {
         display: grid;
-        place-items: center;
+        place-self: center;
     }
 
     .mcq

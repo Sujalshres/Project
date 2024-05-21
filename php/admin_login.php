@@ -16,7 +16,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        if(($username == $row1['username'] and $password==$row1['password']) or ($username == $row2['username'] and $row2['password']))
+        if(($username == $row1['username'] and $password==$row1['password']) or ($username == $row2['username'] and $password==$row2['password']))
         {
             // storing username in session 
             $_SESSION['username'] = $username;

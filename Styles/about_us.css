@@ -1,3 +1,22 @@
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'nunito';
+}
+
 p
 {
     text-align: justify;
@@ -9,12 +28,6 @@ body
     color: black;
 }
 
-*
-{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Nunito', sans-serif;
-}
 
 a
 {
@@ -30,7 +43,7 @@ p
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     margin: 10px;
 }
 
@@ -43,8 +56,8 @@ ul
 #hamburger-icon
 {
     display: none;
-    font-size: 30px;
     margin-left: 10px;
+    height: 33px;   
 }
 
 .top
@@ -88,13 +101,15 @@ ul
     margin-left: 7vw;
 }
 
-.navbar ul li a i 
+.navbar ul li a svg
 {
     display: none;
+    height: 19px;
 }
 
 /* navigation bar ends  */
-h1{
+h1
+{
     text-align: center;
 }
 
@@ -166,10 +181,10 @@ h1{
         grid-template-columns: 1fr 2fr;
     }
     
-    .navbar ul li a i 
+    .navbar ul li a svg
     {
         display: grid;
-        place-items: center;
+        place-self: center;
     }
 
     main

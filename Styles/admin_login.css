@@ -1,8 +1,26 @@
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'nunito';
+}
+
 body
 {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
 }
 
 p
@@ -67,6 +85,10 @@ input[type="submit"]:hover
     {
         display: none;
     }
+    .line
+    {
+        display: none;
+    }
 }
 
 #welcome
@@ -97,11 +119,12 @@ input[type="text"]:focus, input[type="password"]:focus
 }
 
 
-i
+svg
 {
-   position: relative;
-   top: 1px;
-   left:-10px;
+    position: relative;
+    top: 8px;
+    left: -8px;
+    height: 20px;
 }
 
 #name, #pass 

@@ -70,7 +70,7 @@
                                 <?php echo $row['name']; ?>
                             </li>
                             <hr>
-                            <li><a href="">Settings</a></li>
+                            <li><a href="settings.php">Settings</a></li>
                             <li><a href="../php/admin_logout.php">Log Out</a></li>
                         </ul>
                     </div>

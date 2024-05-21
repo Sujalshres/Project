@@ -1,10 +1,21 @@
 /* default class */
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
 
 *
 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'nunito';
 }
 
 a
@@ -20,7 +31,7 @@ p
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     text-align: center;
 }
 

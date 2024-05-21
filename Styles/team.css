@@ -2,7 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito';
     background-color: rgb(189,216,211);
 }
 
@@ -20,11 +20,23 @@ body
 } */
 
 /* default class */
+@font-face 
+{
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face 
+{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
 *
 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'nunito';
 }
 
 a
@@ -40,7 +52,7 @@ p
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
 }
 
 ul
@@ -77,8 +89,8 @@ input:focus,textarea:focus
 #hamburger-icon
 {
     display: none;
-    font-size: 30px;
     margin-left: 10px;
+    height: 33px;
 }
 
 
@@ -89,6 +101,7 @@ input:focus,textarea:focus
     align-items: center;
     justify-content: space-between;
     padding-top: 5px;
+    z-index: 1;
 }
 
 .logo
@@ -123,9 +136,10 @@ input:focus,textarea:focus
     margin-left: 7vw;
 }
 
-.navbar ul li a i 
+.navbar ul li a svg
 {
     display: none;
+    height: 19px;
 }
 /* navigation bar ends  */
 
@@ -225,28 +239,22 @@ input:focus,textarea:focus
 
 /* icon animations  */
 
-#facebook,#linkedin,#github
+.links svg
 {
+    margin: 5px 30px;
+    height: 38px;
     color:rgb(255, 255, 255);
     transition: transform 0.5s;
 }
 
-
-
-#facebook:hover,
-#linkedin:hover,
-#github:hover
+.links svg:hover
 {
     transform: scale(1.2);
 }
 
 /* icon animation ends  */
 
-.links i
-{
-    margin: 5px 30px;
-    font-size: 40px;
-}
+
 
 
 
@@ -370,9 +378,9 @@ footer > .container
         grid-template-columns: 1fr 2fr;
     }
     
-    .navbar ul li a i 
+    .navbar ul li a svg
     {
         display: grid;
-        place-items: center;
+        place-self: center;
     }
 }
